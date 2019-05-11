@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 </head>
 <body>
-    <div id="score"></div>
-    <canvas id="tetris" width="240" height="400"></canvas>
+    <div class="container">
+        <div class="game">
+            <h1>tetris</h1>
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <div class="info">
+                <span id="score"></span>
+                <span class="instructions">move: ↑↓←→ | rotate: wq</span>
+            </div>
+        </div>
+    </div>
     <script src="tetris.js"></script>
 </body>
 </html>

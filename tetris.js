@@ -203,7 +203,7 @@ function update(time = 0) {
 }
 
 function updateScore() {
-    document.getElementById('score').innerText = `Score: ${player.score}`;
+    document.getElementById('score').innerText = `score: ${player.score}`;
 }
 
 const colors = [
