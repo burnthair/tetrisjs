@@ -89,10 +89,13 @@ function createPiece(type) {
     }
 }
 
-function draw() {
-    context.fillStyle = '#000';
+function fillCanvas(color) {
+    context.fillStyle = color;
     context.fillRect(0, 0, canvas.width, canvas.height);
-    
+}
+
+function draw() {
+    fillCanvas('#171300');
     drawMatrix(arena, {x: 0, y: 0});
     drawMatrix(player.matrix, player.pos);
 }
@@ -188,7 +191,7 @@ function rotate(matrix, dir) {
 }
 
 let dropCounter = 0;
-let dropInterval = 1000;
+let dropInterval = 200;
 
 let lastTime = 0;
 function update(time = 0) {
@@ -239,6 +242,15 @@ document.addEventListener('keydown', event => {
     } 
 })
 
-playerReset();
-updateScore();
-update ();
+document.getElementById('start-button').addEventListener('click', event => {
+    event.target.style.display = 'none';
+    startGame();
+});
+
+function startGame() {
+    playerReset();
+    updateScore();
+    update();
+}
+
+fillCanvas('#fff1a4');

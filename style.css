@@ -20,13 +20,33 @@ body {
     justify-content: center;
     font-family: 'IBM Plex Mono', monospace;
     color: #fff1a4;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 10px;
 }
 
 canvas {
     width: auto;
     min-height: 400px;
     height: 80vh;
-    border: 2px solid #fff1a4;
+    border: 20px solid #fff1a4;
+    box-shadow: 10px 10px 0 #736003;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'IBM Plex Mono', monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fba19c;
+    box-shadow: 5px 5px 0 #ea5b33;
+    font-size: 24px;
+    border: none;
+    color: white;
 }
 
 .info {
