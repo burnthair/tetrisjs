@@ -14,6 +14,20 @@
             <h1>tetris</h1>
             <canvas id="tetris" width="240" height="400"></canvas>
             <button id="start-button" type="button">start</button>
+            <form id="difficulty" action="">
+                <span>
+                    <input type="radio" name="difficulty" value="easy" id="easy" checked>
+                    <label for="easy">easy</label>
+                </span>
+                <span>
+                    <input type="radio" name="difficulty" value="medium" id="medium">
+                    <label for="medium">medium</label>
+                </span>
+                <span>
+                    <input type="radio" name="difficulty" value="hard" id="hard">
+                    <label for="hard">hard</label>
+                </span>
+            </form>
             <div class="info">
                 <span id="score"></span>
                 <span class="instructions">move: ↑↓←→ | rotate: wq</span>

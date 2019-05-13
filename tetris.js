@@ -191,7 +191,7 @@ function rotate(matrix, dir) {
 }
 
 let dropCounter = 0;
-let dropInterval = 200;
+let dropInterval = 0;
 
 let lastTime = 0;
 function update(time = 0) {
@@ -211,13 +211,13 @@ function updateScore() {
 
 const colors = [
     null,
-    '#69fabc',
-    '#ea5b33',
-    '#5a5a99',
-    '#aa4c3c',
-    '#12fef1',
-    '#acc2f4',
-    '#fba19c'
+    '#69fabc', // seafoam green
+    '#ea5b33', // orange red
+    '#5a5a99', // purple
+    '#aa4c3c', // brick red
+    '#12fef1', // aqua
+    '#acc2f4', // periwinkle
+    '#fba19c' // pink
 ]
 
 const arena = createMatrix(12, 20);
@@ -243,7 +243,10 @@ document.addEventListener('keydown', event => {
 })
 
 document.getElementById('start-button').addEventListener('click', event => {
+    var difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+    dropInterval = (difficulty === 'easy') ? 800 : (difficulty === 'medium') ? 400 : 100;
     event.target.style.display = 'none';
+    document.getElementById('difficulty').style.display = 'none';
     startGame();
 });
 
